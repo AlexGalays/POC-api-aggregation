@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/alexgalays/Documents/workspace/alex/poc-http-aggregation/conf/application.conf,/Users/alexgalays/Documents/workspace/alex/poc-http-aggregation/target/scala-2.12/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/alexgalays/Documents/workspace/alex/poc-http-aggregation/conf/logback.xml,/Users/alexgalays/Documents/workspace/alex/poc-http-aggregation/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/alexgalays/Documents/workspace/alex/poc-http-aggregation/conf/routes,/Users/alexgalays/Documents/workspace/alex/poc-http-aggregation/target/scala-2.12/classes/routes)[0m

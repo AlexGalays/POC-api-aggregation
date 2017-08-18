@@ -1,0 +1,43 @@
+@()
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>API Aggregation demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  </head>
+
+  <body>
+    <button style="background: #FF4444; color: white; padding: 10px" onclick="fire()">GET THE POKEMUNS</button>
+    <pre><code style="display: block; margin-top: 40px"></code></pre>
+  </body>
+
+  <script>
+    function fire() {
+      const body = `
+        next
+        results
+          url?lol=lel
+            weight
+            forms
+              url
+                sprites
+        lol
+          pouet
+      `
+
+      fetch(`api/aggregation/${encodeURIComponent('http://pokeapi.co/api/v2/pokemon?limit=3')}`, {
+        method: 'POST',
+        body
+      })
+      .then(res => res.ok
+        ? res.json()
+        : res.text().then(Promise.reject)
+      )
+      .then(json => document.querySelector('code').textContent = JSON.stringify(json, null, 2))
+      .catch(err => document.querySelector('code').textContent = err)
+    }
+  </script>
+</html>

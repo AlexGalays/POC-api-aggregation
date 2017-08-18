@@ -1,0 +1,4 @@
+
+POST    /api/aggregation/:mainResourceUrl         controllers.ApiAggregation.index(mainResourceUrl: String)
+
+GET     /$any<.*>                                 controllers.Application.index(any: String)
