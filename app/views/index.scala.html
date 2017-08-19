@@ -34,7 +34,7 @@
       })
       .then(res => res.ok
         ? res.json()
-        : res.text().then(Promise.reject)
+        : res.text().then(t => Promise.reject(t))
       )
       .then(json => document.querySelector('code').textContent = JSON.stringify(json, null, 2))
       .catch(err => document.querySelector('code').textContent = err)
